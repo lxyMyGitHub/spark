@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="study_scala">
+    <output-path>$PROJECT_DIR$/out/artifacts/study_scala</output-path>
+    <root id="archive" name="study_scala.jar">
+      <element id="module-output" name="spark_scala" />
+    </root>
+  </artifact>
+</component>
