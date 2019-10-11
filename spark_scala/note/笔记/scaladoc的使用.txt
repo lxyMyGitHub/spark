@@ -1,0 +1,9 @@
+Scaladoc是什么：scala api文档，包含了scala所有的api以及使用说明，class、object、trait、function、method、implicit等
+
+通过url：http://www.scala-lang.org/api/current/#package，可以在线浏览Scaladoc
+
+以下是一些Scaladoc使用的tips（小贴士，小备注）：
+1、直接在左上角的搜索框中，搜索你需要的寻找的包、类即可
+2、O和C，分别代表了某个类的伴生对象以及伴生类的概念
+3、标记为implicit的方法，代表的是隐式转换
+4、举例：搜索StringOps，可以看到String的增强类，StringOps的所有方法说明
