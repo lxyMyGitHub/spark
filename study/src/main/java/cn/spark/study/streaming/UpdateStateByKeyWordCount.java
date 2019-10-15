@@ -77,7 +77,6 @@ public class UpdateStateByKeyWordCount {
                 for (Integer value : values) {
                     newValue += value;
                 }
-
                 return Optional.of(newValue);
             }
         });

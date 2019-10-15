@@ -70,7 +70,7 @@ object BreakRepeat {
 
   /**
     * 使用Breaks类的break方法
-    */
+  */
   def function3()={
     println("使用Breaks类的break方法")
     import scala.util.control.Breaks._
