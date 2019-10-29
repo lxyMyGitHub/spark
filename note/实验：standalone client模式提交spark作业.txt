@@ -1,40 +1,40 @@
-localÄ£Ê½ÏÂ£¬ÎÒÃÇ¶¼²»»á·Åµ½Éú²ú»úÆ÷ÉÏÃæÈ¥Ìá½»
-localÄ£Ê½£¬ÆäÊµ½ö½öÓÃÓÚeclipseÖĞÔËĞĞspark×÷Òµ£¬ÒÔ¼°´ò¶Ïµã£¬µ÷ÊÔspark×÷ÒµÀ´ÓÃ
-Í¨³££¬ÓÃlocalÄ£Ê½Ö´ĞĞ£¬ÎÒÃÇ¶¼»áÊÖ¹¤Éú³ÉÒ»·İÊı¾İ£¬À´Ê¹ÓÃ
+localæ¨¡å¼ä¸‹ï¼Œæˆ‘ä»¬éƒ½ä¸ä¼šæ”¾åˆ°ç”Ÿäº§æœºå™¨ä¸Šé¢å»æäº¤
+localæ¨¡å¼ï¼Œå…¶å®ä»…ä»…ç”¨äºeclipseä¸­è¿è¡Œsparkä½œä¸šï¼Œä»¥åŠæ‰“æ–­ç‚¹ï¼Œè°ƒè¯•sparkä½œä¸šæ¥ç”¨
+é€šå¸¸ï¼Œç”¨localæ¨¡å¼æ‰§è¡Œï¼Œæˆ‘ä»¬éƒ½ä¼šæ‰‹å·¥ç”Ÿæˆä¸€ä»½æ•°æ®ï¼Œæ¥ä½¿ç”¨
 
-Í¨³£Çé¿öÏÂÀ´Ëµ£¬²¿ÊğÔÚ²âÊÔ»úÆ÷ÉÏÈ¥£¬½øĞĞ²âÊÔÔËĞĞspark×÷ÒµµÄÊ±ºò
-¶¼ÊÇÊ¹ÓÃclientÄ£Ê½£¨standalone clientÄ£Ê½£¬»òstandalone clusterÄ£Ê½£©
-clientÄ£Ê½ÏÂ£¬Ìá½»×÷ÒµÒÔºó£¬driverÔÚ±¾»úÆô¶¯£¬¿ÉÒÔÊµÊ±¿´µ½ÏêÏ¸µÄÈÕÖ¾ĞÅÏ¢£¬·½±ãÄã×·×ÙºÍÅÅ²é´íÎó
+é€šå¸¸æƒ…å†µä¸‹æ¥è¯´ï¼Œéƒ¨ç½²åœ¨æµ‹è¯•æœºå™¨ä¸Šå»ï¼Œè¿›è¡Œæµ‹è¯•è¿è¡Œsparkä½œä¸šçš„æ—¶å€™
+éƒ½æ˜¯ä½¿ç”¨clientæ¨¡å¼ï¼ˆstandalone clientæ¨¡å¼ï¼Œæˆ–standalone clusteræ¨¡å¼ï¼‰
+clientæ¨¡å¼ä¸‹ï¼Œæäº¤ä½œä¸šä»¥åï¼Œdriveråœ¨æœ¬æœºå¯åŠ¨ï¼Œå¯ä»¥å®æ—¶çœ‹åˆ°è¯¦ç»†çš„æ—¥å¿—ä¿¡æ¯ï¼Œæ–¹ä¾¿ä½ è¿½è¸ªå’Œæ’æŸ¥é”™è¯¯
 
-standaloneÄ£Ê½ÏÂÌá½»spark×÷Òµ
+standaloneæ¨¡å¼ä¸‹æäº¤sparkä½œä¸š
 
-standaloneÄ£Ê½Ìá½»£¬Î¨Ò»ÓëlocalÇø±ğ£¬¾ÍÊÇÒ»¶¨ÒªÏë°ì·¨½«masterÉèÖÃ³Éspark://master_ip:port£¬±ÈÈçspark://192.168.0.103:7077
+standaloneæ¨¡å¼æäº¤ï¼Œå”¯ä¸€ä¸localåŒºåˆ«ï¼Œå°±æ˜¯ä¸€å®šè¦æƒ³åŠæ³•å°†masterè®¾ç½®æˆspark://master_ip:portï¼Œæ¯”å¦‚spark://192.168.0.103:7077
 
-ÈıÖÖÉèÖÃmasterµÄ·½Ê½
-1¡¢Ó²±àÂë: SparkConf.setMaster("spark://IP:PORT")
-2¡¢spark-submit: --master spark://IP:PORT
-3¡¢spark-shell: --master spark://IP:PORT
+ä¸‰ç§è®¾ç½®masterçš„æ–¹å¼
+1ã€ç¡¬ç¼–ç : SparkConf.setMaster("spark://IP:PORT")
+2ã€spark-submit: --master spark://IP:PORT
+3ã€spark-shell: --master spark://IP:PORT
 
-Í¨³£À´Ëµ£¬ÉÏÃæÈıÖÖĞ´·¨£¬Ê¹ÓÃµÚ¶şÖÖ£¬ÊÇ×îºÏÊÊ
+é€šå¸¸æ¥è¯´ï¼Œä¸Šé¢ä¸‰ç§å†™æ³•ï¼Œä½¿ç”¨ç¬¬äºŒç§ï¼Œæ˜¯æœ€åˆé€‚
 
-Ò»°ãÎÒÃÇ¶¼ÊÇÓÃspark-submit½Å±¾À´Ìá½»spark applicationµÄ£¬ºÜÉÙÓÃspark-shell£¬spark-shell½ö½öÓÃÓÚÊµÑéºÍ²âÊÔÒ»Ğ©ÌØ±ğ¼òµ¥µÄspark×÷Òµ
-Ê¹ÓÃspark-submit½Å±¾À´Ìá½»Ê±£¬»¹¿ÉÒÔÖ¸¶¨Á½ÖÖdeploy mode£¬spark standalone clusterÖ§³Öclient modeºÍcluster mode
-client modeÏÂ£¬ÄãÔÚÄÄÌ¨»úÆ÷ÉÏÓÃspark-submit½Å±¾Ìá½»application£¬driver¾Í»áÔÚÄÇÌ¨»úÆ÷ÉÏÆô¶¯
-cluster modeÏÂ£¬driver»áÍ¨¹ımaster½ø³Ì£¬Ëæ»ú±»·ÖÅä¸øÄ³Ò»¸öworker½ø³ÌÀ´Æô¶¯
+ä¸€èˆ¬æˆ‘ä»¬éƒ½æ˜¯ç”¨spark-submitè„šæœ¬æ¥æäº¤spark applicationçš„ï¼Œå¾ˆå°‘ç”¨spark-shellï¼Œspark-shellä»…ä»…ç”¨äºå®éªŒå’Œæµ‹è¯•ä¸€äº›ç‰¹åˆ«ç®€å•çš„sparkä½œä¸š
+ä½¿ç”¨spark-submitè„šæœ¬æ¥æäº¤æ—¶ï¼Œè¿˜å¯ä»¥æŒ‡å®šä¸¤ç§deploy modeï¼Œspark standalone clusteræ”¯æŒclient modeå’Œcluster mode
+client modeä¸‹ï¼Œä½ åœ¨å“ªå°æœºå™¨ä¸Šç”¨spark-submitè„šæœ¬æäº¤applicationï¼Œdriverå°±ä¼šåœ¨é‚£å°æœºå™¨ä¸Šå¯åŠ¨
+cluster modeä¸‹ï¼Œdriverä¼šé€šè¿‡masterè¿›ç¨‹ï¼Œéšæœºè¢«åˆ†é…ç»™æŸä¸€ä¸ªworkerè¿›ç¨‹æ¥å¯åŠ¨
 
-ÕâÀïÎÒÃÇ¾ÍÖªµÀÁË£¬standaloneÄ£Ê½£¬ÊÇÒªÔÚspark-submitÖĞ£¬ÓÃ--masterÖ¸¶¨Master½ø³ÌµÄURL
-Æä´Î£¬Ê¹ÓÃstandalone clientÄ£Ê½»òclusterÄ£Ê½£¬ÊÇÒªÔÚspark-submitÖĞ£¬Ê¹ÓÃ--deploy-mode client/clusterÀ´ÉèÖÃ
-Ä¬ÈÏ£¬Èç¹ûÄã²»ÉèÖÃ--deploy-mode£¬ÄÇÃ´¾ÍÊÇclientÄ£Ê½
+è¿™é‡Œæˆ‘ä»¬å°±çŸ¥é“äº†ï¼Œstandaloneæ¨¡å¼ï¼Œæ˜¯è¦åœ¨spark-submitä¸­ï¼Œç”¨--masteræŒ‡å®šMasterè¿›ç¨‹çš„URL
+å…¶æ¬¡ï¼Œä½¿ç”¨standalone clientæ¨¡å¼æˆ–clusteræ¨¡å¼ï¼Œæ˜¯è¦åœ¨spark-submitä¸­ï¼Œä½¿ç”¨--deploy-mode client/clusteræ¥è®¾ç½®
+é»˜è®¤ï¼Œå¦‚æœä½ ä¸è®¾ç½®--deploy-modeï¼Œé‚£ä¹ˆå°±æ˜¯clientæ¨¡å¼
 
-Ê¹ÓÃspark-submit½Å±¾À´Ìá½»applicationÊ±£¬application jarÊÇ»á×Ô¶¯±»·Ö·¢µ½ËùÓĞworker½ÚµãÉÏÈ¥µÄ
-¶ÔÓÚÄãµÄapplicationÒÀÀµµÄ¶îÍâjar°ü£¬¿ÉÒÔÍ¨¹ıspark-submit½Å±¾ÖĞµÄ--jars±êÊ¶£¬À´Ö¸¶¨£¬¿ÉÒÔÊ¹ÓÃ¶ººÅ·Ö¸ô¶à¸öjar
-±ÈÈçËµ£¬ÄãĞ´spark-sqlµÄÊ±ºò£¬ÓĞµÄÊ±ºò£¬ÔÚ×÷ÒµÖĞ£¬ÒªÍùmysqlÖĞĞ´Êı¾İ£¬´ËÊ±¿ÉÄÜ»á³öÏÖÕÒ²»µ½mysqlÇı¶¯jar°üµÄÇé¿ö
-´ËÊ±£¬¾ÍĞèÒªÄãÊÖ¶¯ÔÚspark-submit½Å±¾ÖĞ£¬Ê¹ÓÃ--jars£¬¼ÓÈëÒ»Ğ©ÒÀÀµµÄjar°ü
+ä½¿ç”¨spark-submitè„šæœ¬æ¥æäº¤applicationæ—¶ï¼Œapplication jaræ˜¯ä¼šè‡ªåŠ¨è¢«åˆ†å‘åˆ°æ‰€æœ‰workerèŠ‚ç‚¹ä¸Šå»çš„
+å¯¹äºä½ çš„applicationä¾èµ–çš„é¢å¤–jaråŒ…ï¼Œå¯ä»¥é€šè¿‡spark-submitè„šæœ¬ä¸­çš„--jarsæ ‡è¯†ï¼Œæ¥æŒ‡å®šï¼Œå¯ä»¥ä½¿ç”¨é€—å·åˆ†éš”å¤šä¸ªjar
+æ¯”å¦‚è¯´ï¼Œä½ å†™spark-sqlçš„æ—¶å€™ï¼Œæœ‰çš„æ—¶å€™ï¼Œåœ¨ä½œä¸šä¸­ï¼Œè¦å¾€mysqlä¸­å†™æ•°æ®ï¼Œæ­¤æ—¶å¯èƒ½ä¼šå‡ºç°æ‰¾ä¸åˆ°mysqlé©±åŠ¨jaråŒ…çš„æƒ…å†µ
+æ­¤æ—¶ï¼Œå°±éœ€è¦ä½ æ‰‹åŠ¨åœ¨spark-submitè„šæœ¬ä¸­ï¼Œä½¿ç”¨--jarsï¼ŒåŠ å…¥ä¸€äº›ä¾èµ–çš„jaråŒ…
 
-ÎÒÃÇÌá½»standalone clientÄ£Ê½µÄ×÷Òµ
-1¡¢--masterºÍ--deploy-mode£¬À´Ìá½»×÷Òµ
-2¡¢¹Û²ì×÷ÒµÖ´ĞĞÈÕÖ¾£¬¿ÉÒÔ¿´µ½È¥Á¬½Óspark://192.168.0.103:7077 URLµÄmaster
-3¡¢¹Û²ìÒ»Ğ©spark web ui£¬¿ÉÒÔ¿´µ½completed applicationsÒ»À¸ÖĞ£¬ÓĞÎÒÃÇ¸Õ¸ÕÔËĞĞµÄ×÷Òµ£¬±È¶ÔÒ»ÏÂuiÉÏµÄapplicationIdºÍÈÕÖ¾ÖĞµÄapplicationId
-4¡¢ÖØĞÂÔÙÖ´ĞĞÒ»´Î×÷Òµ£¬Ò»Ö´ĞĞ£¬Á¢¼´¿´Ò»ÏÂjps²é¿´½ø³Ì£¬¿´¿´standalone clientÄ£Ê½Ìá½»×÷ÒµµÄÊ±ºò£¬µ±Ç°»úÆ÷ÉÏ»áÆô¶¯ÄÄĞ©½ø³Ì
-	SparkSubmit: Ò²¾ÍÊÇÎÒÃÇµÄdriver½ø³Ì£¬ÔÚ±¾»úÉÏÆô¶¯£¨spark-submitËùÔÚµÄ»úÆ÷£©
-	CoarseGrainedExecutorBackend£¨ÄÚ²¿³ÖÓĞÒ»¸öExecutor¶ÔÏó£©: ÔÚÄãµÄÖ´ĞĞspark×÷ÒµµÄworker»úÆ÷ÉÏ£¬¿Ï¶¨»á¸øÄãµÄ×÷Òµ·ÖÅäºÍÆô¶¯Ò»¸öexecutor½ø³Ì£¬¾ßÌåÃû×Ö¾ÍÊÇÄÇ¸ö
+æˆ‘ä»¬æäº¤standalone clientæ¨¡å¼çš„ä½œä¸š
+1ã€--masterå’Œ--deploy-modeï¼Œæ¥æäº¤ä½œä¸š
+2ã€è§‚å¯Ÿä½œä¸šæ‰§è¡Œæ—¥å¿—ï¼Œå¯ä»¥çœ‹åˆ°å»è¿æ¥spark://192.168.0.103:7077 URLçš„master
+3ã€è§‚å¯Ÿä¸€äº›spark web uiï¼Œå¯ä»¥çœ‹åˆ°completed applicationsä¸€æ ä¸­ï¼Œæœ‰æˆ‘ä»¬åˆšåˆšè¿è¡Œçš„ä½œä¸šï¼Œæ¯”å¯¹ä¸€ä¸‹uiä¸Šçš„applicationIdå’Œæ—¥å¿—ä¸­çš„applicationId
+4ã€é‡æ–°å†æ‰§è¡Œä¸€æ¬¡ä½œä¸šï¼Œä¸€æ‰§è¡Œï¼Œç«‹å³çœ‹ä¸€ä¸‹jpsæŸ¥çœ‹è¿›ç¨‹ï¼Œçœ‹çœ‹standalone clientæ¨¡å¼æäº¤ä½œä¸šçš„æ—¶å€™ï¼Œå½“å‰æœºå™¨ä¸Šä¼šå¯åŠ¨å“ªäº›è¿›ç¨‹
+	SparkSubmit: ä¹Ÿå°±æ˜¯æˆ‘ä»¬çš„driverè¿›ç¨‹ï¼Œåœ¨æœ¬æœºä¸Šå¯åŠ¨ï¼ˆspark-submitæ‰€åœ¨çš„æœºå™¨ï¼‰
+	CoarseGrainedExecutorBackendï¼ˆå†…éƒ¨æŒæœ‰ä¸€ä¸ªExecutorå¯¹è±¡ï¼‰: åœ¨ä½ çš„æ‰§è¡Œsparkä½œä¸šçš„workeræœºå™¨ä¸Šï¼Œè‚¯å®šä¼šç»™ä½ çš„ä½œä¸šåˆ†é…å’Œå¯åŠ¨ä¸€ä¸ªexecutorè¿›ç¨‹ï¼Œå…·ä½“åå­—å°±æ˜¯é‚£ä¸ª
