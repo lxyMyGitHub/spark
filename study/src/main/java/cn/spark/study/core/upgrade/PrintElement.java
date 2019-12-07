@@ -17,25 +17,22 @@ import java.util.List;
  * @Date 2019/12/2 14:19
  * @Version 1.0
  */
-public class PlusClosureVariable { 
-    public static void main(String[] args) {
-        SparkConf conf = new SparkConf().setAppName("PlusClosureVariable");
-//        SparkConf conf = new SparkConf().setAppName("PlusClosureVariable").1setMaster("local");
+public class PrintElement {
+    public static void main(String[] args)
+    {
+        SparkConf conf = new SparkConf().setAppName("PrintElement").setMaster("local").set("spark.default.parallelism","2");
+//        SparkConf conf = new SparkConf().setAppName("PrintElement"). setMaster("local");
         JavaSparkContext sc = new JavaSparkContext(conf);
         List<Integer> numbers = Arrays.asList(1,2,3,4,5);
         JavaRDD<Integer> numbersRDD = sc.parallelize(numbers);
-        final List<Integer> closureNumbers = new ArrayList<Integer>();
-        closureNumbers.add(0);
+
         numbersRDD.foreach(new VoidFunction<Integer>() {
             @Override
             public void call(Integer num) throws Exception {
-                int closureNumberValue = closureNumbers.get(0);
-                closureNumberValue += num;
-                closureNumbers.set(0,closureNumberValue);
-                System.out.println("===========================闭包值 : "+ closureNumberValue +"==========================");
+
+                System.out.println("===========================num : "+ num +"==========================");
             }
         });
-        System.out.println("===========================闭包值 : "+closureNumbers.get(0)+"==========================");
 
 
         sc.close();
