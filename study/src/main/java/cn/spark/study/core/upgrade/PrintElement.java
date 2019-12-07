@@ -1,4 +1,4 @@
-package cn.spark.study.core;
+package cn.spark.study.core.upgrade;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;

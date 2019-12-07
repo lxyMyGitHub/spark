@@ -3,6 +3,7 @@ package cn.spark.study.core.upgrade;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,23 +15,40 @@ import java.util.List;
  * @Date 2019/12/7 13:41
  * @Version 1.0
  */
-public class Intersection {
+public class Distince {
     public static void main(String[] args) {
-        SparkConf conf = new SparkConf().setAppName("Intersection").setMaster("local");
+        SparkConf conf = new SparkConf().setAppName("Distince").setMaster("local");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        //intersection
-        //用来获取量个rdd中相同的数据
-        //举例:找出俩个部门中的交集
+        //Distince
+        //对RDD中的数据进行去重
+        //举例:uv统计案例
+        //uv : user view ,每天每个客户能对网站点击多少次
+        //此时 需要对用户进行点击去重,然后统计出每天有多少个用户访问了网站
+        //而不是所有用户访问了多少次
         //准备模拟数据
-        List<String> department1StaffList = Arrays.asList("张三","李四","王二","赵武","小张");
-        JavaRDD<String> department1StaffRDD = sc.parallelize(department1StaffList);
-        List<String> department2StaffList = Arrays.asList("熙悦","窒息","周武","武器","小张");
-        JavaRDD<String> department2StaffRDD = sc.parallelize(department2StaffList);
-        JavaRDD<String> staffIntersectionRDD = department1StaffRDD.intersection(department2StaffRDD);
-        for (String staff : staffIntersectionRDD.collect()) {
-            System.out.println(staff);
-        }
+        List<String> accessLogs = Arrays.asList(
+                "user1 2019-12-07 13:49:12",
+                "user2 2019-12-07 13:49:12",
+                "user3 2019-12-07 13:49:12",
+                "user1 2019-12-07 13:49:12",
+                "user1 2019-12-07 13:49:12",
+                "user4 2019-12-07 13:49:12",
+                "user2 2019-12-07 13:49:12"
+                );
+        JavaRDD<String> accessLogsRDD = sc.parallelize(accessLogs);
+        JavaRDD<String> accessLogRDD = accessLogsRDD.map(new Function<String, String>() {
+            @Override
+            public String call(String log) throws Exception {
+                return log.split(" ")[0];
+            }
+        });
+        JavaRDD<String> usersRDD = accessLogRDD.distinct();
+        int uvSize = usersRDD.collect().size();
+        System.out.println("us size is : " + uvSize);
+//        for (String staff : usersRDD.collect()) {
+//            System.out.println(staff);
+//        }
 
 
         sc.close();
