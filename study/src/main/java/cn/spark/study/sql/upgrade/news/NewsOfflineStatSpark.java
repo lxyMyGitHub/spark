@@ -45,15 +45,15 @@ public class NewsOfflineStatSpark {
         //每次spark计算出来的结果,实际上都会写入MySQL存储
         //这样就可以基于MySQL,用javaweb技术开发一套管理平台,来使用图标方式展示每次spark计算出来的关键指标
         //第一个关键指标:页面pv统计及排序
-//        caculateDailyPagePv(hiveContext,yesterday);
+        caculateDailyPagePv(hiveContext,yesterday);
         //第二个关键指标:页面uv统计及排序
         caculateDailyPageUv(hiveContext,yesterday);
         //第三个关键指标:新用户注册比率统计
-//        caculateDailyNewUserRegisterRate(hiveContext,yesterday);
+        caculateDailyNewUserRegisterRate(hiveContext,yesterday);
         //第四个关键指标:用户跳出率统计
-//        caculateDailyUserJumpRate(hiveContext,yesterday);
+        caculateDailyUserJumpRate(hiveContext,yesterday);
         //第五个关键指标:板块热度排行榜
-//        caculateDailySectionPvSort(hiveContext,yesterday);
+        caculateDailySectionPvSort(hiveContext,yesterday);
 
         sc.close();
     }
@@ -68,13 +68,14 @@ public class NewsOfflineStatSpark {
                 "SELECT " +
                         "date,section,pv " +
                         "FROM ( " +
+                        "SELECT " +
                         "date," +
                         "section," +
                         "count(*) pv " +
-                        "FROM news_accrss " +
+                        "FROM news_access " +
                         "WHERE action = 'view' " +
                         "AND date = '"+  yesterday +"' " +
-                        "GROUP BY date,section " +
+                        "GROUP BY date,section" +
                         ") t " +
                         "ORDER BY pv DESC ";
         DataFrame df = hiveContext.sql(sql);
