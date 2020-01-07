@@ -1,0 +1,45 @@
+tar -zxvf flume-ng-1.5.0-cdh5.3.6.tar.gz
+mv apache-flume-1.5.0-cdh5.3.6-bin flume
+vi ~/.bashrc
+export FLUME_HOME=/usr/local/flume
+export FLUME_CONF_DIR=$FLUME_HOME/conf
+export PATH=$FLUME_HOME/bin
+source ~/.bashrc
+
+
+修改flume配置文件
+vi conf/flume-conf.properties
+
+#agent1表示代理名称
+agent1.sources=source1
+agent1.sinks=sink1
+agent1.channels=channel1
+#配置source1
+agent1.sources.source1.type=spooldir
+agent1.sources.source1.spoolDir=/home/hadoop/logs
+agent1.sources.source1.channels=channel1
+agent1.sources.source1.fileHeader = false
+agent1.sources.source1.interceptors = i1
+agent1.sources.source1.interceptors.i1.type = timestamp
+#配置channel1
+agent1.channels.channel1.type=file
+agent1.channels.channel1.checkpointDir=/home/hadoop/logs_tmp_cp
+agent1.channels.channel1.dataDirs=/home/hadoop/logs_tmp
+#配置sink1
+agent1.sinks.sink1.type=hdfs
+agent1.sinks.sink1.hdfs.path=hdfs://weekend109:9000/logs
+agent1.sinks.sink1.hdfs.fileType=DataStream
+agent1.sinks.sink1.hdfs.writeFormat=TEXT
+agent1.sinks.sink1.hdfs.rollInterval=1
+agent1.sinks.sink1.channel=channel1
+agent1.sinks.sink1.hdfs.filePrefix=%Y-%m-%d
+ 
+创建需要的文件夹
+本地文件夹：mkdir /usr/local/logs
+HDFS文件夹：hdfs dfs -mkdir /logs
+
+启动flume-agent
+flume-ng agent -n agent1 -c conf -f /home/hadoop/app/flume/conf/flume-conf.properties -Dflume.root.logger=DEBUG,console
+
+测试flume
+新建一份文件，移动到/usr/local/logs目录下，flume就会自动上传到HDFS的/logs目录中
